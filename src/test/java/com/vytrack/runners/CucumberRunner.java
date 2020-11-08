@@ -7,11 +7,14 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        plugin = {
+                "rerun:target/rerun.txt",
+                "json:target/cucumber.json"
+        },
         features = "src/test/resources/features",
         glue = "com/vytrack/step_definitions",
         dryRun = false,
-        tags = "@login",
+        tags = "@with_two_columns",
         publish = true
-)
-public class CucumberRunner {
+)public class CucumberRunner {
 }

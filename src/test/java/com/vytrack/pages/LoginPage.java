@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends Basepage{
+
     //To not use web elements directly in step definition classes
     //helps to prevent code duplication and keep step definitions clean
     @FindBy(id = "prependedInput")
@@ -17,7 +18,7 @@ public class LoginPage extends Basepage{
     @FindBy(css = "[class='alert alert-error']")
     private WebElement warningMessage;
 
-    public String getWarningMessageTest() {
+    public String getWarningMessageText() {
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
@@ -54,5 +55,4 @@ public class LoginPage extends Basepage{
         username.sendKeys(usernameValue);
         password.sendKeys(passwordValue, Keys.ENTER);
     }
-
 }

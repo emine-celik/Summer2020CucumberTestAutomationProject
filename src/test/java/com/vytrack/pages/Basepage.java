@@ -62,6 +62,4 @@ public  abstract class Basepage {
     public void clickSaveAndClose(){
         BrowserUtils.clickOnElement(saveAndCloseBtn);
     }
-
-
 }
