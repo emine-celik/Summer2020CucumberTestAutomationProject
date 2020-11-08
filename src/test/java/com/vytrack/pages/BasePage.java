@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public  abstract class Basepage {
+public  abstract class BasePage {
 
     @FindBy(className = "oro-subtitle")
     protected WebElement pageSubTitle;
@@ -22,7 +22,7 @@ public  abstract class Basepage {
     @FindBy(css = "[class='loader-mask']")
     protected List<WebElement> loaderMask;
 
-    public Basepage() {
+    public BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
